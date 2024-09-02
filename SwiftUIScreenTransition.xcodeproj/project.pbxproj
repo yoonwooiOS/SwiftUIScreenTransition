@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		99408BC42C857BB900544EC1 /* SwiftUIScreenTransitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BC32C857BB900544EC1 /* SwiftUIScreenTransitionApp.swift */; };
-		99408BC62C857BB900544EC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BC52C857BB900544EC1 /* ContentView.swift */; };
+		99408BC62C857BB900544EC1 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BC52C857BB900544EC1 /* OnBoardingView.swift */; };
 		99408BC82C857BBA00544EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99408BC72C857BBA00544EC1 /* Assets.xcassets */; };
 		99408BCB2C857BBA00544EC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99408BCA2C857BBA00544EC1 /* Preview Assets.xcassets */; };
+		99408BD22C85818500544EC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 99408BD12C85818500544EC1 /* .gitignore */; };
+		99408BD42C85819C00544EC1 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BD32C85819C00544EC1 /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		99408BC02C857BB900544EC1 /* SwiftUIScreenTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIScreenTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99408BC32C857BB900544EC1 /* SwiftUIScreenTransitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIScreenTransitionApp.swift; sourceTree = "<group>"; };
-		99408BC52C857BB900544EC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		99408BC52C857BB900544EC1 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		99408BC72C857BBA00544EC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99408BCA2C857BBA00544EC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		99408BD12C85818500544EC1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		99408BD32C85819C00544EC1 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 		99408BB72C857BB900544EC1 = {
 			isa = PBXGroup;
 			children = (
+				99408BD12C85818500544EC1 /* .gitignore */,
 				99408BC22C857BB900544EC1 /* SwiftUIScreenTransition */,
 				99408BC12C857BB900544EC1 /* Products */,
 			);
@@ -51,8 +56,9 @@
 		99408BC22C857BB900544EC1 /* SwiftUIScreenTransition */ = {
 			isa = PBXGroup;
 			children = (
+				99408BD52C8581A500544EC1 /* Security */,
 				99408BC32C857BB900544EC1 /* SwiftUIScreenTransitionApp.swift */,
-				99408BC52C857BB900544EC1 /* ContentView.swift */,
+				99408BC52C857BB900544EC1 /* OnBoardingView.swift */,
 				99408BC72C857BBA00544EC1 /* Assets.xcassets */,
 				99408BC92C857BBA00544EC1 /* Preview Content */,
 			);
@@ -65,6 +71,14 @@
 				99408BCA2C857BBA00544EC1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		99408BD52C8581A500544EC1 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				99408BD32C85819C00544EC1 /* APIKey.swift */,
+			);
+			path = Security;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99408BCB2C857BBA00544EC1 /* Preview Assets.xcassets in Resources */,
+				99408BD22C85818500544EC1 /* .gitignore in Resources */,
 				99408BC82C857BBA00544EC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99408BC62C857BB900544EC1 /* ContentView.swift in Sources */,
+				99408BC62C857BB900544EC1 /* OnBoardingView.swift in Sources */,
+				99408BD42C85819C00544EC1 /* APIKey.swift in Sources */,
 				99408BC42C857BB900544EC1 /* SwiftUIScreenTransitionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,8 +294,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +302,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yun.SwiftUIScreenTransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,8 +326,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +334,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yun.SwiftUIScreenTransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
