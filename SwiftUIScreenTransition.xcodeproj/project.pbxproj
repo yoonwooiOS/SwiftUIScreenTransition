@@ -13,6 +13,12 @@
 		99408BCB2C857BBA00544EC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99408BCA2C857BBA00544EC1 /* Preview Assets.xcassets */; };
 		99408BD22C85818500544EC1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 99408BD12C85818500544EC1 /* .gitignore */; };
 		99408BD42C85819C00544EC1 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BD32C85819C00544EC1 /* APIKey.swift */; };
+		99408BD82C8582E500544EC1 /* RadiusBlueBackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BD72C8582E500544EC1 /* RadiusBlueBackGround.swift */; };
+		99408BDA2C8583BD00544EC1 /* ForegroundWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BD92C8583BD00544EC1 /* ForegroundWrapper.swift */; };
+		99408BDF2C8587B600544EC1 /* ProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BDE2C8587B600544EC1 /* ProfileSettingView.swift */; };
+		99408BE12C85A78900544EC1 /* GrayCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BE02C85A78900544EC1 /* GrayCircleView.swift */; };
+		99408BE32C85BA5000544EC1 /* CameraInProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BE22C85BA5000544EC1 /* CameraInProfileView.swift */; };
+		99408BE72C86041200544EC1 /* ProfileImageSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BE62C86041200544EC1 /* ProfileImageSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,12 @@
 		99408BCA2C857BBA00544EC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		99408BD12C85818500544EC1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		99408BD32C85819C00544EC1 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		99408BD72C8582E500544EC1 /* RadiusBlueBackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusBlueBackGround.swift; sourceTree = "<group>"; };
+		99408BD92C8583BD00544EC1 /* ForegroundWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundWrapper.swift; sourceTree = "<group>"; };
+		99408BDE2C8587B600544EC1 /* ProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingView.swift; sourceTree = "<group>"; };
+		99408BE02C85A78900544EC1 /* GrayCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayCircleView.swift; sourceTree = "<group>"; };
+		99408BE22C85BA5000544EC1 /* CameraInProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInProfileView.swift; sourceTree = "<group>"; };
+		99408BE62C86041200544EC1 /* ProfileImageSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +69,9 @@
 			isa = PBXGroup;
 			children = (
 				99408BD52C8581A500544EC1 /* Security */,
+				99408BD62C8582A900544EC1 /* CustomModifier */,
 				99408BC32C857BB900544EC1 /* SwiftUIScreenTransitionApp.swift */,
-				99408BC52C857BB900544EC1 /* OnBoardingView.swift */,
+				99408BDB2C85879300544EC1 /* View */,
 				99408BC72C857BBA00544EC1 /* Assets.xcassets */,
 				99408BC92C857BBA00544EC1 /* Preview Content */,
 			);
@@ -79,6 +92,27 @@
 				99408BD32C85819C00544EC1 /* APIKey.swift */,
 			);
 			path = Security;
+			sourceTree = "<group>";
+		};
+		99408BD62C8582A900544EC1 /* CustomModifier */ = {
+			isa = PBXGroup;
+			children = (
+				99408BD72C8582E500544EC1 /* RadiusBlueBackGround.swift */,
+				99408BD92C8583BD00544EC1 /* ForegroundWrapper.swift */,
+				99408BE02C85A78900544EC1 /* GrayCircleView.swift */,
+				99408BE22C85BA5000544EC1 /* CameraInProfileView.swift */,
+			);
+			path = CustomModifier;
+			sourceTree = "<group>";
+		};
+		99408BDB2C85879300544EC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99408BC52C857BB900544EC1 /* OnBoardingView.swift */,
+				99408BDE2C8587B600544EC1 /* ProfileSettingView.swift */,
+				99408BE62C86041200544EC1 /* ProfileImageSettingView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +186,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99408BDA2C8583BD00544EC1 /* ForegroundWrapper.swift in Sources */,
+				99408BE12C85A78900544EC1 /* GrayCircleView.swift in Sources */,
 				99408BC62C857BB900544EC1 /* OnBoardingView.swift in Sources */,
+				99408BE32C85BA5000544EC1 /* CameraInProfileView.swift in Sources */,
 				99408BD42C85819C00544EC1 /* APIKey.swift in Sources */,
+				99408BDF2C8587B600544EC1 /* ProfileSettingView.swift in Sources */,
+				99408BD82C8582E500544EC1 /* RadiusBlueBackGround.swift in Sources */,
 				99408BC42C857BB900544EC1 /* SwiftUIScreenTransitionApp.swift in Sources */,
+				99408BE72C86041200544EC1 /* ProfileImageSettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

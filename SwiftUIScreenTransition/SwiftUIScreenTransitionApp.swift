@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIScreenTransitionApp: App {
     var body: some Scene {
         WindowGroup {
-            OnBoardingView()
+            ProfileSettingView()
         }
     }
 }
