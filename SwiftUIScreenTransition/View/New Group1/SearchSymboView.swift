@@ -1,5 +1,5 @@
 //
-//  SearchCoinView.swift
+//  SearchSymboView.swift
 //  SwiftUIScreenTransition
 //
 //  Created by 김윤우 on 9/3/24.
@@ -15,7 +15,7 @@ struct SFSymbols: Hashable, Identifiable {
 }
 
 
-struct SearchCoinView: View {
+struct SearchSymboView: View {
     @State private var searchText = ""
      var filterSymbols: [SFSymbols] {
         return searchText.isEmpty ? symbolData : symbolData.filter{ $0.name.contains(searchText)}
@@ -79,6 +79,5 @@ struct CustomCell: View {
 }
 
 #Preview {
-    
-    SearchCoinView()
+    SearchSymboView()
 }
