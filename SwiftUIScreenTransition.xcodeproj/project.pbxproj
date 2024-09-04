@@ -19,6 +19,7 @@
 		99408BE12C85A78900544EC1 /* GrayCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BE02C85A78900544EC1 /* GrayCircleView.swift */; };
 		99408BE32C85BA5000544EC1 /* CameraInProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BE22C85BA5000544EC1 /* CameraInProfileView.swift */; };
 		99408BE72C86041200544EC1 /* ProfileImageSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99408BE62C86041200544EC1 /* ProfileImageSettingView.swift */; };
+		998D16A32C886F0300FC62AD /* MyRandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D16A22C886F0300FC62AD /* MyRandomImageView.swift */; };
 		99F08F9E2C86F89E000CD1D5 /* SearchSymboView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F08F9D2C86F89E000CD1D5 /* SearchSymboView.swift */; };
 		99F08FA02C870CFD000CD1D5 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F08F9F2C870CFD000CD1D5 /* CoinView.swift */; };
 		99F08FA32C870E22000CD1D5 /* UpbitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F08FA22C870E22000CD1D5 /* UpbitAPI.swift */; };
@@ -39,6 +40,7 @@
 		99408BE02C85A78900544EC1 /* GrayCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayCircleView.swift; sourceTree = "<group>"; };
 		99408BE22C85BA5000544EC1 /* CameraInProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInProfileView.swift; sourceTree = "<group>"; };
 		99408BE62C86041200544EC1 /* ProfileImageSettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageSettingView.swift; sourceTree = "<group>"; };
+		998D16A22C886F0300FC62AD /* MyRandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRandomImageView.swift; sourceTree = "<group>"; };
 		99F08F9D2C86F89E000CD1D5 /* SearchSymboView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSymboView.swift; sourceTree = "<group>"; };
 		99F08F9F2C870CFD000CD1D5 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 		99F08FA22C870E22000CD1D5 /* UpbitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpbitAPI.swift; sourceTree = "<group>"; };
@@ -117,10 +119,19 @@
 		99408BDB2C85879300544EC1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				998D16A12C886EEE00FC62AD /* RanadomImage */,
 				99F08F9A2C86F807000CD1D5 /* Search */,
 				99F08F992C86F7F9000CD1D5 /* SignIn */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		998D16A12C886EEE00FC62AD /* RanadomImage */ = {
+			isa = PBXGroup;
+			children = (
+				998D16A22C886F0300FC62AD /* MyRandomImageView.swift */,
+			);
+			path = RanadomImage;
 			sourceTree = "<group>";
 		};
 		99F08F992C86F7F9000CD1D5 /* SignIn */ = {
@@ -232,6 +243,7 @@
 				99408BD42C85819C00544EC1 /* APIKey.swift in Sources */,
 				99408BDF2C8587B600544EC1 /* ProfileSettingView.swift in Sources */,
 				99F08FA32C870E22000CD1D5 /* UpbitAPI.swift in Sources */,
+				998D16A32C886F0300FC62AD /* MyRandomImageView.swift in Sources */,
 				99408BD82C8582E500544EC1 /* RadiusBlueBackGround.swift in Sources */,
 				99F08F9E2C86F89E000CD1D5 /* SearchSymboView.swift in Sources */,
 				99408BC42C857BB900544EC1 /* SwiftUIScreenTransitionApp.swift in Sources */,
