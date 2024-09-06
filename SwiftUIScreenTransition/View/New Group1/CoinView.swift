@@ -25,15 +25,20 @@ struct CoinView: View {
                 listView()
             }
             .searchable(text: $searchCoinText, placement: .navigationBarDrawer, prompt: "코인 이름을 입력해주세요.")
+//            .onSubmit(of: .search) {
+//                print("enter")
+////                print(randomMarket)
+//            }
             .navigationTitle("My Money")
         }
         .tint(.black)
         .task {
             do {
                 let result = try await UpbitAPI.fetchAllMarket()
+                print("Fetched markets: \(result)")
                 market = result
             } catch {
-                
+                print("Failed to fetch markets: \(error.localizedDescription)")
             }
            
         }
@@ -45,27 +50,35 @@ struct CoinView: View {
     }
     func listView() -> some View {
         LazyVStack {
-            ForEach(filterMarketData, id: \.self) { item in
+            ForEach($market, id: \.id) { item in
                 rowView(item)
             }
         }
     }
-    func rowView(_ item: Market) -> some View {
+    func rowView(_ item: Binding<Market>) -> some View {
         NavigationLink {
             coinDetailView(coinData: item)
         } label: {
             HStack() {
                 VStack(alignment: .leading) {
-                    Text(item.koreanName)
+                    Text(item.wrappedValue.koreanName)
                         .fontWeight(.bold)
                         .foregroundStyle(.black)
-                    Text(item.market)
+                    Text(item.wrappedValue.market)
                         .foregroundStyle(.gray)
                         .font(.caption)
                 }
                 Spacer()
-                Text(item.englishName)
+                Text(item.wrappedValue.englishName)
                     .foregroundStyle(.green)
+                Button {
+                    item.isLiked.wrappedValue.toggle()
+                } label: {
+                    Image(systemName: item.wrappedValue.isLiked ? "star.fill" :"star")
+                }
+                .padding([.trailing, .leading], 20)
+
+
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 6)
@@ -103,10 +116,10 @@ struct CoinView: View {
 }
 
 struct coinDetailView: View {
-    var coinData: Market
+    @Binding var coinData: Market
     var body: some View {
         VStack{
-            bannerView(data: coinData)
+            bannerView(data: $coinData)
         }
         .navigationTitle("Coin Detail")
         .navigationBarTitleDisplayMode(.inline)
@@ -114,7 +127,7 @@ struct coinDetailView: View {
             print(coinData)
         }
     }
-    func bannerView(data: Market) -> some View {
+    func bannerView(data: Binding<Market>) -> some View {
         VStack {
             ZStack() {
                 RoundedRectangle(cornerRadius: 25)
@@ -129,21 +142,28 @@ struct coinDetailView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 25))
                     .frame(height: 150)
                     .padding()
-                    
-                VStack(alignment: .leading) {
-                    Text(data.koreanName)
-                        .font(.title)
-                    Text(data.market)
-                        .font(.title).bold()
+                   
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(data.wrappedValue.koreanName)
+                            .font(.title)
+                        Text(data.wrappedValue.market)
+                            .font(.title).bold()
+                    }
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(40)
+                    Button(action: {
+                        data.wrappedValue.isLiked.toggle()
+                    }, label: {
+                        Image(systemName: data.wrappedValue.isLiked ? "star.fill" : "star")
+                    })
+                    .padding(.trailing, 40)
                 }
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(40)
+              
             }
             Spacer()
         }
-
-        
     }
 }
 #Preview {

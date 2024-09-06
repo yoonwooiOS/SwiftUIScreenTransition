@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct Market: Hashable, Codable {
+struct Market: Hashable, Codable, Identifiable {
+    let id = UUID()
     let market, koreanName, englishName: String
-
+    var isLiked: Bool = false
     enum CodingKeys: String, CodingKey {
         case market
         case koreanName = "korean_name"
@@ -24,6 +25,9 @@ struct UpbitAPI {
     static func fetchAllMarket() async  throws -> Markets {
         let url = URL(string: "https://api.upbit.com/v1/market/all")!
         let (data, response) = try await URLSession.shared.data(from: url)
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                  throw URLError(.badServerResponse) // 서버 응답이 올바르지 않은 경우
+              }
         let decodedData = try JSONDecoder().decode(Markets.self, from: data)
         
         return decodedData

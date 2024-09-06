@@ -26,21 +26,27 @@ struct MyRandomImageView: View {
         NavigationView {
             ScrollView {
                 ForEach($sectionNameList, id: \.id) { item in
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        VStack(alignment: .leading) {
-                            Text(item.sectionName.wrappedValue)
-                                .font(.title2)
-                            HStack {
-                                ForEach(1..<10, id: \.self) { _ in
-                                    if let url = randomURL {
-                                        imageView(url, sectionName: item)
+                    
+                    VStack(alignment: .leading) {
+                        Text(item.sectionName.wrappedValue)
+                            .font(.title2).bold()
+                            .padding()
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            VStack {
+                                HStack {
+                                    ForEach(1..<10, id: \.self) { _ in
+                                        if let url = randomURL {
+                                            imageView(url, sectionName: item)
+                                        }
                                     }
                                 }
                             }
+                            .padding()
                         }
-                        .padding()
                     }
+                    
                 }
+                
             }
             .navigationTitle("My Random Image")
         }

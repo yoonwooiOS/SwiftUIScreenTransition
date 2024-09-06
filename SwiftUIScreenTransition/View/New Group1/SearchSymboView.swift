@@ -23,7 +23,7 @@ struct SearchSymboView: View {
     @State var symbolData = [
         SFSymbols(name: "star", Image: "star", isLiked: false),
         SFSymbols(name: "xmark", Image: "xmark", isLiked: false),
-        SFSymbols(name: "magnifyingglass", Image: "magnifyingglass", isLiked: false),                    
+        SFSymbols(name: "magnifyingglass", Image: "magnifyingglass", isLiked: false),                   
         SFSymbols(name: "heart", Image: "heart", isLiked: false),
         SFSymbols(name: "menucard", Image: "menucard", isLiked: false),
         SFSymbols(name: "house", Image: "house", isLiked: false),

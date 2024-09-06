@@ -15,7 +15,7 @@ struct Category: Identifiable, Hashable {
 
 struct CartegoryView: View {
     @State private var searchText = ""
-    @State var category = ["SF", "가족", "스릴러"]
+    @State var category = ["SF", "가족", "스릴러", "액션", "멜로", "로맨스", "SF", "애니메이션", "코미디"]
     @State var categoryList: [Category] = []
     var body: some View {
         NavigationStack {
@@ -28,7 +28,6 @@ struct CartegoryView: View {
                 }
             }
             .searchable(text: $searchText)
-            
             .onSubmit(of: .search) {
 //                categoryList.append(Category(name: searchText, count: .random(in: 1...100)))
                 category.append(searchText)
