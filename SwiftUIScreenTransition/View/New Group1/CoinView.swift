@@ -10,6 +10,7 @@ import SwiftUI
 struct CoinView: View {
     @State private var searchCoinText = ""
     @State private var market: Markets = []
+    @State private var filteredMarket: Markets = []
     private var randomMarket: Market? {
         return market.randomElement()
     }
@@ -25,10 +26,13 @@ struct CoinView: View {
                 listView()
             }
             .searchable(text: $searchCoinText, placement: .navigationBarDrawer, prompt: "코인 이름을 입력해주세요.")
-//            .onSubmit(of: .search) {
-//                print("enter")
-////                print(randomMarket)
-//            }
+            .onSubmit(of: .search) {
+                self.filteredMarket = market.filter {
+                                   $0.koreanName.contains(searchCoinText) ||
+                                   $0.englishName.contains(searchCoinText)
+                               }
+            
+            }
             .navigationTitle("My Money")
         }
         .tint(.black)
@@ -50,7 +54,7 @@ struct CoinView: View {
     }
     func listView() -> some View {
         LazyVStack {
-            ForEach($market, id: \.id) { item in
+            ForEach($filteredMarket, id: \.id) { item in
                 rowView(item)
             }
         }

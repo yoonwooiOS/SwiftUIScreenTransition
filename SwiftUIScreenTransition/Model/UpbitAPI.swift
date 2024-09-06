@@ -9,7 +9,7 @@ import Foundation
 
 struct Market: Hashable, Codable, Identifiable {
     let id = UUID()
-    let market, koreanName, englishName: String
+    var market, koreanName, englishName: String
     var isLiked: Bool = false
     enum CodingKeys: String, CodingKey {
         case market
